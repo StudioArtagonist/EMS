@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="employee"
+            type="com.studioartagonist.ems.Employee" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?selectableItemBackground"
+        android:id="@+id/empRow"
+        app:contentPadding="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="?listPreferredItemHeight"
+            tools:text="ABC"
+            android:gravity="center_vertical"
+            android:text="@{employee.name}"/>
+
+    </androidx.cardview.widget.CardView>
+</layout>

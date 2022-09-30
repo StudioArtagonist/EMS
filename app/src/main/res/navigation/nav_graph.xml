@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/employeeListFragment">
+
+    <fragment
+        android:id="@+id/employeeListFragment"
+        android:name="com.studioartagonist.ems.EmployeeListFragment"
+        android:label="Employee List"
+        tools:layout="@layout/fragment_employee_list" >
+        <action
+            android:id="@+id/action_employeeListFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_employeeListFragment_to_newEmployeeFragment"
+            app:destination="@id/newEmployeeFragment" />
+        <action
+            android:id="@+id/action_employeeListFragment_to_employeeDetailsFragment"
+            app:destination="@id/employeeDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.studioartagonist.ems.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/newEmployeeFragment"
+        android:name="com.studioartagonist.ems.NewEmployeeFragment"
+        android:label="fragment_new_employee"
+        tools:layout="@layout/fragment_new_employee" />
+    <fragment
+        android:id="@+id/employeeDetailsFragment"
+        android:name="com.studioartagonist.ems.EmployeeDetailsFragment"
+        android:label="fragment_employee_details"
+        tools:layout="@layout/fragment_employee_details" />
+</navigation>
